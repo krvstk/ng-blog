@@ -1,0 +1,131 @@
+.navbar {
+  align-items: center;
+  background-color: #efefef;
+  border-bottom: #bf3d01 5px solid;
+  color: #211809;
+  display: flex;
+  font-family: 'rubik', 'arial', sans-serif;
+  height: 10rem;
+  justify-content: space-evenly;
+}
+
+.navbar-hint {
+  color: #bf3d01;
+  font-size: 20px;
+}
+
+.navbar-item-main {
+  font-size: 50px;
+  line-height: 47px;
+}
+
+.navbar-item ul {
+  display: flex;
+  font-size: 35px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-item li {
+  list-style: none;
+}
+
+.navbar-item li a, .navbar-item-main a {
+  color: #211809;
+  display: block;
+  padding: 1rem;
+  text-decoration: none;
+}
+
+.navbar-item li a:hover {
+  color: #bf3d01;
+}
+
+.navbar-item-main a:hover {
+  color: #bf3d01;
+  text-decoration: underline;
+}
+
+.toggle-button {
+  display: none;
+  flex-direction: column;
+  font-size: 60px;
+  height: 40px;
+  justify-content: space-between;
+  position: absolute;
+  right: 3rem;
+  top: 2rem;
+  width: 60px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #211809;
+}
+
+.button-x {
+  color: #efefef;
+  text-decoration: none;
+  font-size: 60px;
+}
+
+@media screen and (max-width: 1000px) and (min-width: 600px) {
+  .navbar {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 599px) {
+
+  .navbar {
+    align-items: flex-start;
+    background: #bf3d01;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+  }
+
+  .navbar-hint {
+    display: none;
+  }
+
+  .navbar-item-main {
+    font-size: 40px;
+    position: absolute;
+    text-align: center;
+    top: 25%;
+    width: 100%;
+  }
+
+  .navbar-item {
+    color: #efefef;
+    position: absolute;
+    top: 36%;
+    width: 100%;
+  }
+
+  .navbar-item ul {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .navbar-item li {
+    font-size: 40px;
+    margin: 0 0 20px 0;
+    text-align: center;
+  }
+
+  .navbar-item li a, .navbar-item-main a {
+    color: #efefef;
+  }
+
+  .navbar-item li a:hover, .navbar-item-main a:hover {
+    color: #211809;
+    text-decoration: none;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+}

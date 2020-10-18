@@ -1,0 +1,27 @@
+<nav
+  class="navbar"
+  [ngStyle.lt-sm]="{'display': menuShrinked ? 'none' : 'flex' }">
+  <div class="navbar-hint">Web Developer</div>
+  <div class="navbar-item-main"><a href="#">{{menuShrinked ? 'Blyzniuk Yevhen' : 'home'}}</a></div>
+  <div class="navbar-item">
+    <ul>
+      <li><a href="#">blog</a></li>
+      <li><a href="#">contact</a></li>
+      <li><a href="#">about</a></li>
+    </ul>
+  </div>
+</nav>
+<a
+  href="#"
+  class="toggle-button"
+  (click)="menuShrinked=!menuShrinked"
+  *ngIf="menuShrinked; else X">
+  <span class="bar"></span>
+  <span class="bar"></span>
+  <span class="bar"></span>
+</a>
+<ng-template #X>
+  <a href="#" (click)="menuShrinked=!menuShrinked" class="toggle-button button-x">
+    <span class="x">X</span>
+  </a>
+</ng-template>
